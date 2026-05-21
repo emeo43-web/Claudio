@@ -1,8 +1,27 @@
+# Environment
 .env
+!.env.example
+
+# Python
 __pycache__/
 *.pyc
 *.pyo
+*.egg-info/
 .venv/
 venv/
+
+# Database
+*.db
+*.sqlite3
+
+# Legacy
 applied_jobs.json
 screenshots/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Generated CVs
+generated_cvs/
+*.pdf
