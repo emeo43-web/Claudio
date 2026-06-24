@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+/* Streaming cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 0.8s step-end infinite;
+}
+
+/* Markdown in messages */
+.message-content p { margin: 0 0 0.5rem; }
+.message-content p:last-child { margin-bottom: 0; }
+.message-content ul, .message-content ol { padding-left: 1.25rem; margin: 0.25rem 0 0.5rem; }
+.message-content li { margin-bottom: 0.2rem; }
+.message-content strong { font-weight: 600; }
+.message-content h1, .message-content h2, .message-content h3 {
+  font-weight: 700;
+  margin: 0.75rem 0 0.35rem;
+}
+.message-content h1 { font-size: 1.15rem; }
+.message-content h2 { font-size: 1.05rem; }
+.message-content h3 { font-size: 0.95rem; }
+.message-content code {
+  background: rgba(0,0,0,0.08);
+  border-radius: 3px;
+  padding: 0.1rem 0.3rem;
+  font-size: 0.85em;
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+}
+.dark .message-content code {
+  background: rgba(255,255,255,0.12);
+}
+.message-content pre {
+  background: rgba(0,0,0,0.06);
+  border-radius: 6px;
+  padding: 0.75rem;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+.dark .message-content pre {
+  background: rgba(255,255,255,0.07);
+}
+.message-content pre code {
+  background: transparent;
+  padding: 0;
+}
